@@ -16,7 +16,7 @@ export class EditClienteComponent implements OnInit {
   public id:any;
   public token:any;
   public load_btn = false;
-  public load_data = false;
+  public load_data = true;
 
   constructor(
     private _route : ActivatedRoute,
@@ -39,9 +39,14 @@ export class EditClienteComponent implements OnInit {
               this.cliente = undefined;
               this.load_data = false;
             }else{
-              this.cliente = response.data;
+              this.cliente = response.data;            
               this.load_data = false;
+              // setTimeout(()=>{
+                
+              //  },4000);
+
             }
+
           },
           error=>{
             
